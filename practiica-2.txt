@@ -22,3 +22,32 @@ namespace Practica2
                 System.Threading.Thread.Sleep(1000);
             }
                 break;
+case "2":
+                 while (true)//
+         {            
+            Console.Clear();
+            Console.WriteLine("Cronometro  {0}:{1}:{2}", HRS, MIN, SEG);
+            AUX = Environment.TickCount;
+            while (Environment.TickCount <= AUX + 1000) ;
+            SEG = SEG + 1;
+            if (SEG == 60)
+            {
+                SEG = 0;
+                MIN = MIN + 1;
+                if (MIN == 60)
+                {
+                    MIN = 0;
+                    HRS = HRS + 1;
+                    if (HRS == 24)
+                    {
+                        HRS = 0;
+                    }
+                }
+            }
+            }//
+                break;
+            default:  Console.WriteLine("ERROR");
+            break;
+       }
+        }
+    }
